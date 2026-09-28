@@ -1,0 +1,137 @@
+export const categories = [
+  { label: 'محصولات جدید', href: './shop?new=1', key: 'new' },
+  { label: 'مانتو و کت', href: './shop?category=مانتو%20و%20کت', key: 'outerwear', mega: true },
+  { label: 'پیراهن', href: './shop?category=پیراهن', key: 'dress' },
+  { label: 'شومیز', href: './shop?category=شومیز', key: 'shirt' },
+  { label: 'شلوار', href: './shop?category=شلوار', key: 'pants' },
+  { label: 'دامن', href: './shop?category=دامن', key: 'skirt' },
+  { label: 'کیف', href: './shop?category=کیف', key: 'bag' },
+  { label: 'کفش', href: './shop?category=کفش', key: 'shoe' },
+  { label: 'اکسسوری', href: './shop?category=اکسسوری', key: 'accessory' },
+  { label: 'تخفیف‌ها', href: './shop?discount=1', key: 'sale', sale: true },
+  { label: 'گالری مشتریان', href: './gallery', key: 'gallery' },
+  { label: 'مجله توتو', href: './blog', key: 'magazine' }
+];
+
+const baseProducts = [
+  {
+    id: 'toto-101', name: 'مانتوی لینن توتو', category: 'مانتو و کت', type: 'مانتو',
+    price: 2490000, previousPrice: 2890000, discount: 14, badge: 'جدید', badgeType: 'new',
+    stockNote: '', colors: ['#d8d0c4', '#111111', '#8f9ba2'], colorNames: ['کرم روشن', 'مشکی', 'طوسی آبی'],
+    sizes: ['۳۶', '۳۸', '۴۰', '۴۲'], unavailableSizes: ['۴۴'], fabric: 'لینن ترکیبی', season: 'بهار و تابستان', style: 'مینیمال', occasion: 'روزمره',
+    fit: 'قالب آزاد', availability: true, isNew: true, bestSeller: true, rating: 4.8, reviewCount: 32,
+    image: './src/assets/images/catalog-1.webp', secondaryImage: './src/assets/images/catalog-1-alt.webp',
+    imageAlt: 'مدل با مانتوی لینن روشن در فضای استودیویی مینیمال'
+  },
+  {
+    id: 'toto-102', name: 'شومیز مینیمال سفید', category: 'شومیز', type: 'شومیز',
+    price: 1680000, previousPrice: null, discount: null, badge: 'پرفروش', badgeType: '',
+    stockNote: '', colors: ['#f6f5f1', '#c9b99b'], colorNames: ['سفید', 'شیری'], sizes: ['۳۶', '۳۸', '۴۰'], unavailableSizes: ['۴۲'],
+    fabric: 'نخی', season: 'چهار فصل', style: 'کلاسیک', occasion: 'اداری', fit: 'قالب استاندارد', availability: true, isNew: false, bestSeller: true, rating: 4.7, reviewCount: 47,
+    image: './src/assets/images/catalog-3.webp', secondaryImage: './src/assets/images/catalog-3-alt.webp', imageAlt: 'مدل با شومیز سفید و شلوار مشکی در استودیوی روشن'
+  },
+  {
+    id: 'toto-103', name: 'شلوار راسته کرپ', category: 'شلوار', type: 'شلوار',
+    price: 1980000, previousPrice: 2200000, discount: 10, badge: 'موجودی محدود', badgeType: 'warning', stockNote: 'تنها ۳ عدد باقی مانده',
+    colors: ['#111111', '#d8d3cc', '#6f7b78'], colorNames: ['مشکی', 'طوسی روشن', 'سبز خاکستری'], sizes: ['۳۶', '۳۸', '۴۰', '۴۲', '۴۴'], unavailableSizes: [],
+    fabric: 'کرپ', season: 'چهار فصل', style: 'مینیمال', occasion: 'اداری', fit: 'راسته استاندارد', availability: true, isNew: false, bestSeller: true, rating: 4.9, reviewCount: 61,
+    image: './src/assets/images/catalog-2.webp', secondaryImage: './src/assets/images/catalog-2-alt.webp', imageAlt: 'مدل با شلوار راسته مشکی در استودیوی روشن'
+  },
+  {
+    id: 'toto-104', name: 'پیراهن میدی مشکی', category: 'پیراهن', type: 'پیراهن',
+    price: 3150000, previousPrice: null, discount: null, badge: 'جدید', badgeType: 'new', stockNote: '',
+    colors: ['#111111', '#684947'], colorNames: ['مشکی', 'زرشکی تیره'], sizes: ['۳۶', '۳۸', '۴۰', '۴۲'], unavailableSizes: ['۴۲'],
+    fabric: 'کرپ نرم', season: 'چهار فصل', style: 'مجلسی', occasion: 'مهمانی', fit: 'قالب جذب', availability: true, isNew: true, bestSeller: false, rating: 4.6, reviewCount: 18,
+    image: './src/assets/images/catalog-4.webp', secondaryImage: './src/assets/images/catalog-4-alt.webp', imageAlt: 'مدل با پیراهن میدی مشکی در پس‌زمینه روشن'
+  },
+  {
+    id: 'toto-105', name: 'کت کوتاه طوسی', category: 'مانتو و کت', type: 'کت',
+    price: 2870000, previousPrice: 3290000, discount: 13, badge: 'انتخاب توتو', badgeType: '', stockNote: '',
+    colors: ['#b7b8b4', '#e8dfd1'], colorNames: ['طوسی', 'کرم'], sizes: ['۳۶', '۳۸', '۴۰'], unavailableSizes: [],
+    fabric: 'فاستونی سبک', season: 'پاییز و بهار', style: 'کلاسیک', occasion: 'اداری', fit: 'قالب استاندارد', availability: true, isNew: false, bestSeller: false, rating: 4.5, reviewCount: 21,
+    image: './src/assets/images/catalog-5.webp', secondaryImage: './src/assets/images/catalog-5-alt.webp', imageAlt: 'مدل با کت کوتاه طوسی و شلوار مشکی'
+  },
+  {
+    id: 'toto-106', name: 'شلوار واید لینن', category: 'شلوار', type: 'شلوار',
+    price: 2140000, previousPrice: null, discount: null, badge: 'جدید', badgeType: 'new', stockNote: '',
+    colors: ['#e9e3d8', '#6b655f'], colorNames: ['استخوانی', 'قهوه‌ای خاکستری'], sizes: ['۳۶', '۳۸', '۴۰', '۴۲'], unavailableSizes: [],
+    fabric: 'لینن', season: 'بهار و تابستان', style: 'روزمره', occasion: 'روزمره', fit: 'قالب آزاد', availability: true, isNew: true, bestSeller: false, rating: 4.4, reviewCount: 14,
+    image: './src/assets/images/catalog-6.webp', secondaryImage: './src/assets/images/catalog-6-alt.webp', imageAlt: 'مدل با شلوار واید لینن روشن در استودیوی مینیمال'
+  },
+  {
+    id: 'toto-107', name: 'تاپ بافت یقه گرد', category: 'شومیز', type: 'تاپ',
+    price: 1290000, previousPrice: 1490000, discount: 13, badge: '', badgeType: '', stockNote: '',
+    colors: ['#f3f0e9', '#303030', '#b7a78e'], colorNames: ['شیری', 'ذغالی', 'بژ'], sizes: ['۳۶', '۳۸', '۴۰'], unavailableSizes: [],
+    fabric: 'بافت نخی', season: 'بهار', style: 'روزمره', occasion: 'روزمره', fit: 'قالب جذب', availability: true, isNew: false, bestSeller: true, rating: 4.8, reviewCount: 38,
+    image: './src/assets/images/catalog-7.webp', secondaryImage: './src/assets/images/catalog-7-alt.webp', imageAlt: 'مدل با تاپ بافت کرم و دامن مشکی'
+  },
+  {
+    id: 'toto-108', name: 'کت جلیقه‌ای کرم', category: 'مانتو و کت', type: 'کت',
+    price: 2760000, previousPrice: null, discount: null, badge: 'پرفروش', badgeType: '', stockNote: '',
+    colors: ['#d8ccb7', '#3b3b39'], colorNames: ['کرم', 'ذغالی'], sizes: ['۳۶', '۳۸', '۴۰', '۴۲'], unavailableSizes: ['۳۶'],
+    fabric: 'گاباردین', season: 'بهار و پاییز', style: 'مدرن', occasion: 'اداری', fit: 'قالب استاندارد', availability: true, isNew: false, bestSeller: true, rating: 4.7, reviewCount: 26,
+    image: './src/assets/images/catalog-8.webp', secondaryImage: './src/assets/images/catalog-8-alt.webp', imageAlt: 'مدل با کت جلیقه‌ای کرم و شلوار مشکی'
+  },
+  {
+    id: 'toto-109', name: 'دامن میدی فون', category: 'دامن', type: 'دامن',
+    price: 1820000, previousPrice: 2050000, discount: 11, badge: '', badgeType: '', stockNote: '',
+    colors: ['#232323', '#c6b7a4'], colorNames: ['مشکی', 'بژ'], sizes: ['۳۶', '۳۸', '۴۰', '۴۲'], unavailableSizes: [],
+    fabric: 'کرپ', season: 'چهار فصل', style: 'کلاسیک', occasion: 'مهمانی', fit: 'قالب استاندارد', availability: true, isNew: false, bestSeller: false, rating: 4.3, reviewCount: 12,
+    image: './src/assets/images/catalog-9.webp', secondaryImage: './src/assets/images/catalog-9-alt.webp', imageAlt: 'مدل با دامن میدی روشن و شومیز مشکی'
+  },
+  {
+    id: 'toto-110', name: 'کیف دوشی مینیمال', category: 'کیف', type: 'کیف',
+    price: 2390000, previousPrice: null, discount: null, badge: 'جدید', badgeType: 'new', stockNote: '',
+    colors: ['#8e7764', '#161616'], colorNames: ['قهوه‌ای', 'مشکی'], sizes: ['تک‌سایز'], unavailableSizes: [],
+    fabric: 'چرم مصنوعی ممتاز', season: 'چهار فصل', style: 'مینیمال', occasion: 'روزمره', fit: 'تک‌سایز', availability: true, isNew: true, bestSeller: false, rating: 4.6, reviewCount: 9,
+    image: './src/assets/images/catalog-10.webp', secondaryImage: './src/assets/images/catalog-10-alt.webp', imageAlt: 'کیف دوشی مشکی مینیمال در استودیوی روشن'
+  },
+  {
+    id: 'toto-111', name: 'کفش تخت روزمره', category: 'کفش', type: 'کفش',
+    price: 2580000, previousPrice: 2890000, discount: 11, badge: 'موجودی محدود', badgeType: 'warning', stockNote: 'سایزهای پایانی',
+    colors: ['#111111', '#dfd2bf'], colorNames: ['مشکی', 'کرم'], sizes: ['۳۷', '۳۸', '۳۹', '۴۰'], unavailableSizes: ['۳۷'],
+    fabric: 'چرم مصنوعی', season: 'چهار فصل', style: 'روزمره', occasion: 'روزمره', fit: 'قالب استاندارد', availability: true, isNew: false, bestSeller: true, rating: 4.5, reviewCount: 24,
+    image: './src/assets/images/catalog-11.webp', secondaryImage: './src/assets/images/catalog-11-alt.webp', imageAlt: 'کفش زنانه مشکی پاشنه کوتاه در استودیوی روشن'
+  },
+  {
+    id: 'toto-112', name: 'کمربند چرمی مینیمال', category: 'اکسسوری', type: 'کمربند',
+    price: 1450000, previousPrice: null, discount: null, badge: '', badgeType: '', stockNote: '',
+    colors: ['#1b1b1b', '#7a5c49'], colorNames: ['مشکی', 'قهوه‌ای'], sizes: ['تک‌سایز'], unavailableSizes: [],
+    fabric: 'چرم مصنوعی ممتاز', season: 'چهار فصل', style: 'مینیمال', occasion: 'روزمره', fit: 'تک‌سایز', availability: true, isNew: false, bestSeller: false, rating: 4.4, reviewCount: 7,
+    image: './src/assets/images/catalog-12.webp', secondaryImage: './src/assets/images/catalog-12-alt.webp', imageAlt: 'کمربند چرمی مشکی با سگک ساده در استودیوی روشن'
+  }
+];
+
+export const products = baseProducts.map((product, index) => ({
+  ...product,
+  sku: `TOTO-${String(101 + index).padStart(4, '0')}`,
+  popularity: 98 - index * 4,
+  createdAt: `2026-${String(7 - Math.floor(index / 5)).padStart(2, '0')}-${String(28 - index).padStart(2, '0')}`
+}));
+
+export const replaceProducts = nextProducts => {
+  if (Array.isArray(nextProducts) && nextProducts.length) products.splice(0, products.length, ...nextProducts);
+  return products;
+};
+
+export const heroSlides = [
+  { image: './src/assets/images/hero-new.webp', eyebrow: 'کالکشن تازه', title: 'سادگی‌ای که هر روز پوشیده می‌شود', text: 'فرم‌های دقیق، رنگ‌های خنثی و لباس‌هایی که به‌راحتی کنار هم قرار می‌گیرند.', cta: 'مشاهده کالکشن', href: './shop?new=1' },
+  { image: './src/assets/images/catalog-5.webp', eyebrow: 'ویرایش اداری', title: 'مرتب، راحت و آمادهٔ تکرار', text: 'انتخاب‌هایی کاربردی برای ساختن یک کمد منسجم و ماندگار.', cta: 'خرید استایل اداری', href: './shop?occasion=اداری' },
+  { image: './src/assets/images/catalog-4.webp', eyebrow: 'انتخاب توتو', title: 'مشکی؛ همیشه یک انتخاب مطمئن', text: 'برش‌های ساده‌ای که برای قرارهای روزمره و مهمانی‌ها همراه شما می‌مانند.', cta: 'مشاهده پیراهن‌ها', href: './shop?category=پیراهن' }
+];
+
+export const articles = [
+  { id: 'body-shape', category: 'راهنمای استایل', title: 'چگونه فرم بدن خود را بشناسیم؟', excerpt: 'شناخت نسبت‌های بدن به شما کمک می‌کند لباس‌هایی انتخاب کنید که با فرم طبیعی شما هماهنگ‌تر باشند.', date: '۱۲ مرداد ۱۴۰۵', readingTime: '۷ دقیقه', image: './src/assets/images/article-1.webp' },
+  { id: 'size-guide', category: 'راهنمای سایز', title: 'راهنمای انتخاب سایز مانتو و شلوار', excerpt: 'چند اندازه‌گیری ساده در خانه می‌تواند انتخاب سایز آنلاین را مطمئن‌تر و سریع‌تر کند.', date: '۷ مرداد ۱۴۰۵', readingTime: '۵ دقیقه', image: './src/assets/images/article-2.webp' },
+  { id: 'minimal-colors', category: 'ترکیب رنگ', title: 'ترکیب رنگ برای استایل مینیمال', excerpt: 'با ساختن یک پالت کوچک از رنگ‌های خنثی، هر روز ترکیب‌های بیشتری در اختیار دارید.', date: '۲ مرداد ۱۴۰۵', readingTime: '۶ دقیقه', image: './src/assets/images/article-3.webp' }
+];
+
+export const popularSearches = ['مانتوی لینن', 'شومیز سفید', 'استایل مهمانی', 'شلوار کرپ', 'کالکشن جدید'];
+export const defaultRecentSearches = ['کت کوتاه', 'پیراهن مشکی'];
+
+export const megaMenuColumns = [
+  { title: 'مانتو', items: ['مانتوی کوتاه', 'مانتوی بلند', 'مانتوی لینن', 'مانتوی رسمی'] },
+  { title: 'کت و ژاکت', items: ['کت کوتاه', 'کت اورسایز', 'کت رسمی', 'ژاکت سبک'] },
+  { title: 'انتخاب بر اساس استایل', items: ['روزمره', 'اداری', 'مهمانی', 'مینیمال'] },
+  { title: 'راهنمای خرید', items: ['محصولات جدید', 'پرفروش‌ها', 'راهنمای سایز', 'پیشنهاد استایلیست'] }
+];

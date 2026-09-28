@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /checkout
+Disallow: /order-review
+Disallow: /payment-success
+Disallow: /payment-failed
+Disallow: /payment-pending
+Disallow: /account
+
+Sitemap: https://totofashion.ir/sitemap.xml

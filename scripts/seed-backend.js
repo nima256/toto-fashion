@@ -1,0 +1,2 @@
+const mongoose=require('mongoose');const env=require('../config/env');const {ensureSeedProducts}=require('../services/seed');const {ensureAdminFromEnv}=require('../services/adminAccount');
+(async()=>{try{await mongoose.connect(env.mongodbUri);const seeded=await ensureSeedProducts();const admin=await ensureAdminFromEnv();console.log(`Products inserted: ${seeded.inserted}`);console.log(`Admin ready: ${admin.email}`);}finally{await mongoose.disconnect();}})().catch(e=>{console.error(e);process.exit(1);});
