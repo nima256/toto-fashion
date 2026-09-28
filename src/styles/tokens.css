@@ -1,22 +1,26 @@
 :root {
+  /* Brand identity: black, white and a single restrained sky-blue accent. */
   --color-background: #ffffff;
-  --color-background-warm: #fbfaf8;
-  --color-background-soft: #f7f7f7;
+  --color-background-warm: #f5fafc;
+  --color-background-soft: #f4f7f8;
   --color-surface: #ffffff;
-  --color-text-primary: #111111;
-  --color-text-secondary: #616161;
-  --color-text-muted: #858585;
-  --color-border: #e6e6e6;
-  --color-border-strong: #cfcfcf;
-  --color-charcoal: #303030;
+  --color-text-primary: #0f0f0f;
+  --color-text-secondary: #595d61;
+  --color-text-muted: #84898d;
+  --color-border: #e1e6e9;
+  --color-border-strong: #c6ccd0;
+  --color-charcoal: #161616;
   --color-accent: #8fcde5;
-  --color-accent-strong: #347f9b;
+  --color-accent-strong: #2f7690;
   --color-accent-soft: #eaf7fc;
+  --color-accent-tint: #b9e7f7;
   --color-error: #c63838;
   --color-error-soft: #fff4f4;
   --color-success: #27865f;
   --color-success-soft: #effaf6;
   --color-overlay: rgb(17 17 17 / 48%);
+  --shadow-soft: 0 18px 50px rgb(17 17 17 / 6%);
+  --shadow-card: 0 14px 32px rgb(17 17 17 / 7%);
 
   --font-family: "Vazirmatn", "Noto Sans Arabic", Tahoma, Arial, sans-serif;
   --font-size-xs: 0.75rem;
@@ -24,8 +28,8 @@
   --font-size-md: 0.9375rem;
   --font-size-lg: 1.0625rem;
   --font-size-xl: clamp(1.3rem, 1.1rem + 0.7vw, 1.75rem);
-  --font-size-2xl: clamp(1.8rem, 1.2rem + 2vw, 3.25rem);
-  --font-size-3xl: clamp(2.2rem, 1.3rem + 3.5vw, 4.75rem);
+  --font-size-2xl: clamp(1.8rem, 1.2rem + 1.6vw, 2.75rem);
+  --font-size-3xl: clamp(2.2rem, 1.3rem + 2.7vw, 3.75rem);
   --line-height-tight: 1.35;
   --line-height-normal: 1.75;
   --font-weight-regular: 400;
@@ -45,12 +49,12 @@
   --space-10: 4rem;
   --space-11: 5rem;
 
-  --radius-sm: 8px;
-  --radius-md: 10px;
-  --radius-lg: 12px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
   --radius-round: 999px;
 
-  --container: 1440px;
+  --container: 1320px;
   --container-narrow: 1100px;
   --header-height-mobile: 64px;
   --bottom-nav-height: 72px;

@@ -85,11 +85,11 @@
 .admin-data-table td { font-size:var(--font-size-sm); }
 .admin-data-table tr:last-child td { border-bottom:0; }
 .admin-table-product { display:grid; grid-template-columns:48px 1fr; gap:9px; align-items:center; min-width:220px; }
-.admin-table-product img { width:48px; height:64px; object-fit:cover; border-radius:6px; }
+.admin-table-product img { width:48px; height:64px; object-fit:cover; border-radius:var(--radius-sm); }
 .admin-table-product small { display:block; color:var(--color-text-muted); }
-.admin-status { display:inline-flex; align-items:center; min-height:25px; padding:3px 8px; border-radius:var(--radius-round); border:1px solid var(--color-border); font-size:11px; white-space:nowrap; }
+.admin-status { display:inline-flex; align-items:center; min-height:25px; padding:3px 8px; border-radius:var(--radius-sm); border:1px solid var(--color-border); font-size:11px; white-space:nowrap; }
 .admin-status--active, .admin-status--delivered, .admin-status--paid { color:var(--color-success); border-color:#b9dfd0; background:var(--color-success-soft); }
-.admin-status--draft, .admin-status--processing, .admin-status--shipped { color:#5d6d74; border-color:#c9dde5; background:var(--color-accent-soft); }
+.admin-status--draft, .admin-status--processing, .admin-status--shipped { color:var(--color-accent-strong); border-color:#c9dde5; background:var(--color-accent-soft); }
 .admin-status--out-of-stock, .admin-status--cancelled, .admin-status--returned { color:var(--color-error); border-color:#edc4c4; background:var(--color-error-soft); }
 .admin-table-actions { display:flex; gap:4px; }
 .admin-empty { min-height:320px; display:grid; place-content:center; justify-items:center; text-align:center; padding:30px; }
@@ -158,7 +158,7 @@
 .admin-analytics-grid { display:grid; gap:12px; margin-top:14px; }
 .admin-best-sellers { display:grid; gap:10px; }
 .admin-best-sellers > div { display:grid; grid-template-columns:38px minmax(0,1fr) auto; gap:9px; align-items:center; }
-.admin-best-sellers img { width:38px; height:50px; object-fit:cover; border-radius:5px; }
+.admin-best-sellers img { width:38px; height:50px; object-fit:cover; border-radius:var(--radius-sm); }
 .admin-best-sellers strong, .admin-best-sellers b { font-size:var(--font-size-xs); }
 .admin-best-sellers small { display:block; color:var(--color-text-muted); font-size:10px; }
 .admin-compact-chart svg { width:100%; height:90px; }
