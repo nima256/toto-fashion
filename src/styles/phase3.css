@@ -20,7 +20,7 @@
 
 .shipping-progress { margin-bottom:22px; padding:16px; border:1px solid var(--color-accent); border-radius:var(--radius-lg); background:var(--color-accent-soft); }
 .shipping-progress__text { display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:10px; font-size:var(--font-size-sm); }
-.shipping-progress__track { height:5px; overflow:hidden; border-radius:99px; background:#dceff5; direction:rtl; }
+.shipping-progress__track { height:5px; overflow:hidden; border-radius:var(--radius-round); background:#dceff5; direction:rtl; }
 .shipping-progress__track span { display:block; height:100%; border-radius:inherit; background:var(--color-accent-strong); transition:width var(--duration-base); }
 
 .cart-layout,.checkout-layout,.review-layout { display:grid; gap:22px; align-items:start; }
