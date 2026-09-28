@@ -89,7 +89,7 @@
 .admin-table-product small { display:block; color:var(--color-text-muted); }
 .admin-status { display:inline-flex; align-items:center; min-height:25px; padding:3px 8px; border-radius:var(--radius-sm); border:1px solid var(--color-border); font-size:11px; white-space:nowrap; }
 .admin-status--active, .admin-status--delivered, .admin-status--paid { color:var(--color-success); border-color:#b9dfd0; background:var(--color-success-soft); }
-.admin-status--draft, .admin-status--processing, .admin-status--shipped { color:#5d6d74; border-color:#c9dde5; background:var(--color-accent-soft); }
+.admin-status--draft, .admin-status--processing, .admin-status--shipped { color:var(--color-accent-strong); border-color:#c9dde5; background:var(--color-accent-soft); }
 .admin-status--out-of-stock, .admin-status--cancelled, .admin-status--returned { color:var(--color-error); border-color:#edc4c4; background:var(--color-error-soft); }
 .admin-table-actions { display:flex; gap:4px; }
 .admin-empty { min-height:320px; display:grid; place-content:center; justify-items:center; text-align:center; padding:30px; }
