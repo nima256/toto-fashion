@@ -10,7 +10,7 @@
 .button--secondary { background:var(--color-accent-soft); color:var(--color-text-primary); border-color:var(--color-accent); }
 .button--secondary:hover { background:#dff2f9; }
 .button--outline { background:transparent; color:var(--color-text-primary); border-color:var(--color-border-strong); }
-.button--outline:hover { border-color:var(--color-accent-strong); background:var(--color-accent-soft); color:#245f73; }
+.button--outline:hover { border-color:var(--color-accent-strong); background:var(--color-accent-soft); color:var(--color-accent-strong); }
 .button--ghost { min-height:44px; background:transparent; color:var(--color-text-primary); border:0; padding-inline:10px; }
 .button--ghost:hover { background:var(--color-background-soft); }
 .button--block { width:100%; }
@@ -37,11 +37,11 @@
 .field-message { display:flex; align-items:flex-start; gap:7px; min-height:20px; color:var(--color-text-secondary); font-size:var(--font-size-sm); }
 .field-message--error { color:var(--color-error); }
 
-.badge { display:inline-flex; align-items:center; min-height:24px; padding:3px 9px; border-radius:var(--radius-round); background:#fff; border:1px solid var(--color-border); font-size:var(--font-size-xs); font-weight:var(--font-weight-medium); }
+.badge { display:inline-flex; align-items:center; min-height:24px; padding:3px 9px; border-radius:var(--radius-sm); background:#fff; border:1px solid var(--color-border); font-size:var(--font-size-xs); font-weight:var(--font-weight-medium); }
 .badge--new { background:var(--color-accent-soft); border-color:var(--color-accent); }
 .badge--sale { background:var(--color-accent-strong); color:#fff; border-color:var(--color-accent-strong); }
 .badge--warning { background:#fff8ed; border-color:#ead6b1; }
-.chip { min-height:38px; display:inline-flex; align-items:center; gap:7px; padding:7px 12px; border:1px solid var(--color-border); border-radius:var(--radius-round); background:#fff; color:var(--color-text-secondary); }
+.chip { min-height:38px; display:inline-flex; align-items:center; gap:7px; padding:7px 12px; border:1px solid var(--color-border); border-radius:var(--radius-sm); background:#fff; color:var(--color-text-secondary); }
 .chip:hover { border-color:var(--color-border-strong); color:var(--color-text-primary); }
 
 /* Announcement */
@@ -114,7 +114,7 @@
 
 .dialog-overlay { position:fixed; inset:0; z-index:var(--z-dialog); background:var(--color-overlay); opacity:0; visibility:hidden; display:grid; place-items:end center; transition:opacity var(--duration-base), visibility var(--duration-base); }
 .dialog-overlay.is-open { opacity:1; visibility:visible; }
-.dialog { width:100%; max-height:92vh; overflow:auto; background:#fff; border-radius:18px 18px 0 0; translate:0 100%; transition:translate var(--duration-slow) var(--ease-standard); }
+.dialog { width:100%; max-height:92vh; overflow:auto; background:#fff; border-radius:var(--radius-lg) var(--radius-lg) 0 0; translate:0 100%; transition:translate var(--duration-slow) var(--ease-standard); }
 .dialog-overlay.is-open .dialog { translate:0; }
 .dialog__head { min-height:68px; padding:0 20px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid var(--color-border); }
 .dialog__head h2 { margin:0; font-size:var(--font-size-lg); }
@@ -164,7 +164,7 @@
 .phase-hero { background:var(--color-background-warm); border-bottom:1px solid var(--color-border); }
 .phase-hero__grid { display:grid; gap:24px; padding-block:48px; }
 .phase-hero__content { align-self:center; max-width:620px; }
-.phase-hero__eyebrow { display:inline-flex; padding:5px 10px; background:var(--color-accent-soft); border:1px solid var(--color-accent); border-radius:99px; font-size:var(--font-size-xs); margin-bottom:16px; }
+.phase-hero__eyebrow { display:inline-flex; padding:5px 10px; background:var(--color-accent-soft); border:1px solid var(--color-accent); border-radius:var(--radius-sm); font-size:var(--font-size-xs); margin-bottom:16px; }
 .phase-hero h1 { font-size:var(--font-size-2xl); margin-bottom:16px; }
 .phase-hero p { max-width:54ch; margin-bottom:24px; }
 .phase-hero__actions { display:flex; gap:10px; flex-wrap:wrap; }
